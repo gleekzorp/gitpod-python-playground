@@ -1,5 +1,7 @@
 tasks:
-  - init: poetry env use python && poetry install
+  - before: pip install poetry
+    init: poetry install
+    command: poetry env use python
 
 vscode:
   extensions:
